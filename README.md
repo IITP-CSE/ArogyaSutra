@@ -5,7 +5,9 @@
 ### A Multi-Agent Framework for Multimodal Medical Reasoning in Indic Languages
 
 [![HuggingFace](https://img.shields.io/badge/🤗_Models_&_Datasets-yellow?style=flat-square)](https://huggingface.co/collections/iit-patna-cse-ai/arogyasutra)
-[![Python](https://img.shields.io/badge/Python-3.10-blue?style=flat-square)](#)
+[![Paper](https://img.shields.io/badge/📃_Paper-Coming_Soon-grey?style=flat-square)](#)
+[![Project Page](https://img.shields.io/badge/🌐_Project_Page-iitp--cse.github.io-green?style=flat-square)](https://iitp-cse.github.io/ArogyaSutra/)
+[![IJCAI 2026](https://img.shields.io/badge/IJCAI-2026-blue?style=flat-square)](https://2026.ijcai.org/)
 
 </div>
 
@@ -30,30 +32,11 @@ Existing MLLMs, predominantly trained on English-centric data, struggle to suppo
 
 ArogyaSutra uses an actor–critic loop where both agents share the **Qwen2.5-VL-7B** backbone. The Actor grounds reasoning in medical images via four vision tools; the Critic evaluates outputs and either approves or triggers error-specific feedback.
 
-```
-Medical Image + Indic Query
-        │
-        ▼
-   ┌─────────────────────────────────────┐
-   │  ACTOR  (Qwen2.5-VL-7B)            │
-   │  • Invokes vision tools             │
-   │  • Reads short/long-term memory     │
-   │  • Generates reasoning + answer     │
-   └──────────────┬──────────────────────┘
-                  │ candidate answer
-                  ▼
-   ┌─────────────────────────────────────┐
-   │  CRITIC  (Qwen2.5-VL-7B + GPT-4o)  │
-   │  ✔ Correct  →  output final CoT     │
-   │  ✘ Language error  →  code-switch   │
-   │  ✘ Reasoning error →  Indic feedback│
-   │       + update memory → retry Actor │
-   └─────────────────────────────────────┘
-```
-
 **Vision Tools:** Object Detection · Zoom/Crop · Edge Detection · Depth Estimation
 
 **Memory:** Short-term captures the latest error; long-term summarizes all prior errors across the reasoning trajectory. At inference, only the distilled Actor is used — no Critic needed.
+
+![ArogyaSutra Framework](https://raw.githubusercontent.com/IITP-CSE/ArogyaSutra/web/web/actor-critic_2.jpg)
 
 ---
 
@@ -196,11 +179,12 @@ bash test.sh
 ## Citation
 
 ```bibtex
-@article{halder2025arogyasutra,
-  title   = {ArogyaSutra: A Multi-Agent Framework for Multimodal Medical Reasoning in Indic Languages},
-  author  = {Halder, Tanmoy Kanti and Ghosh, Akash and Baidya, Subhadip and Roy, Arijit and Saha, Sriparna},
-  year    = {2025},
-  url     = {https://github.com/IITP-CSE/ArogyaSutra}
+@inproceedings{halder2026arogyasutra,
+  title     = {ArogyaSutra: A Multi-Agent Framework for Multimodal Medical Reasoning in Indic Languages},
+  author    = {Halder, Tanmoy Kanti and Ghosh, Akash and Baidya, Subhadip and Roy, Arijit and Saha, Sriparna},
+  booktitle = {Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence (IJCAI)},
+  year      = {2026},
+  url       = {https://github.com/IITP-CSE/ArogyaSutra}
 }
 ```
 
