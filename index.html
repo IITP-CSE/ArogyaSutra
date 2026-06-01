@@ -64,11 +64,12 @@
   }
   .venue-tag {
     display: inline-block;
-    font-size: 12px; font-weight: 500; letter-spacing: 0.08em;
-    color: var(--accent); background: var(--accent-light);
-    padding: 4px 14px; border-radius: 20px;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.1em;
+    color: #fff; background: var(--accent);
+    padding: 6px 18px; border-radius: 20px;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
+    box-shadow: 0 2px 10px rgba(45,106,79,0.3);
   }
   .hero h1 {
     font-family: 'DM Serif Display', serif;
@@ -269,18 +270,17 @@
     <a href="#contributions">Contributions</a>
     <a href="#framework">Framework</a>
     <a href="#results">Results</a>
+    <a href="#qualitative">Qualitative</a>
     <a href="#bibtex">BibTeX</a>
   </div>
 </nav>
-<!-- Logo IMAGE -->
-<div style="max-width:100px;margin:0 auto;padding:0 2rem 4rem;">
-  <div class="framework-img-wrap">
-    <img src="web/logo.png" alt="ArogyaSutra">
-  </div>
-</div>
+
 <!-- HERO -->
 <div class="hero">
-  <div class="venue-tag">IJCAI 2026</div>
+  <div class="venue-tag"><a href="https://2026.ijcai.org/" target="_blank" style="color:inherit;text-decoration:none;">IJCAI 2026</a></div>
+  <div style="margin: 1.25rem auto 1.5rem;">
+    <img src="web/logo.png" alt="ArogyaSutra logo" width="400" height="400" style="border-radius:16px;object-fit:contain;">
+  </div>
   <h1>ArogyaSutra: A Multi-Agent Framework for<br><em>Multimodal Medical Reasoning</em> in Indic Languages</h1>
   <p class="subtitle">An actor–critic system combining tool-based visual grounding and dual-memory mechanisms for step-wise, error-aware clinical reasoning across 7 Indian languages.</p>
 
@@ -317,7 +317,15 @@
   </div>
 </div>
 
-
+<!-- FRAMEWORK IMAGE -->
+<div style="max-width:860px;margin:0 auto;padding:0 2rem 4rem;">
+  <div class="framework-img-wrap">
+    <img src="./web/actor-critic_2.jpg" alt="ArogyaSutra framework overview">
+    <div class="fig-caption">
+      <strong>Figure 1.</strong> Overview of the ArogyaSutra framework. The Actor processes medical images via vision tools and generates step-wise reasoning. The Critic evaluates outputs, triggering code-switching for language errors or memory-guided reflection for reasoning errors, and iteratively refines the Actor's response.
+    </div>
+  </div>
+</div>
 
 <!-- ABSTRACT -->
 <section id="abstract">
@@ -364,15 +372,6 @@
     </div>
   </div>
 </section>
-<!-- FRAMEWORK IMAGE -->
-<div style="max-width:860px;margin:0 auto;padding:0 2rem 4rem;">
-  <div class="framework-img-wrap">
-    <img src="web/actor-critic_2.jpg" alt="ArogyaSutra framework overview">
-    <div class="fig-caption">
-      <strong>Figure 1.</strong> Overview of the ArogyaSutra framework. The Actor processes medical images via vision tools and generates step-wise reasoning. The Critic evaluates outputs, triggering code-switching for language errors or memory-guided reflection for reasoning errors, and iteratively refines the Actor's response.
-    </div>
-  </div>
-</div>
 
 <!-- FRAMEWORK -->
 <section id="framework">
@@ -486,6 +485,17 @@
         </tbody>
       </table>
     </div>
+  </div>
+</section>
+
+<!-- QUALITATIVE -->
+<section id="qualitative">
+  <div class="section-label">Qualitative Evaluation</div>
+  <h2>Qualitative Analysis</h2>
+  <p>ArogyaSutra consistently generates responses in the target Indic language and demonstrates more structured and corrective reasoning compared to baselines. Leveraging the actor–critic framework, the model identifies and revises incorrect intermediate conclusions, progressively eliminating implausible hypotheses — highlighting its effectiveness in improving multilingual alignment and reasoning fidelity.</p>
+  <div style="margin-top:1.5rem;text-align:center;">
+    <img src="web/qualitative_fig.jpg" alt="Qualitative evaluation results" style="width:100%;max-width:800px;border-radius:var(--radius);border:1px solid var(--border);">
+    <p style="font-size:13px;color:var(--ink3);margin-top:0.65rem;">Qualitative comparison of ArogyaSutra against MedGemma-4B-it and Qwen2.5-VL-7B-Instruct baselines. Correct clinical tokens are highlighted in green; incorrect or adversarially altered tokens in red.</p>
   </div>
 </section>
 
