@@ -4,10 +4,7 @@
 
 ### A Multi-Agent Framework for Multimodal Medical Reasoning in Indic Languages
 
-[![Paper](https://img.shields.io/badge/📃_Paper-Coming_Soon-grey?style=flat-square)](#)
 [![HuggingFace](https://img.shields.io/badge/🤗_Models_&_Datasets-yellow?style=flat-square)](https://huggingface.co/collections/iit-patna-cse-ai/arogyasutra)
-[![Dataset](https://img.shields.io/badge/Dataset-ArogyaBodha-blue?style=flat-square)](https://huggingface.co/datasets/iit-patna-cse-ai/ArogyaBodha)
-[![Model](https://img.shields.io/badge/Model-arogyasutraV1E3.5_8B-green?style=flat-square)](https://huggingface.co/iit-patna-cse-ai/arogyasutraV1E3.5)
 [![Python](https://img.shields.io/badge/Python-3.10-blue?style=flat-square)](#)
 
 </div>
@@ -81,7 +78,6 @@ Zero-shot evaluation on 130 samples/language (910 total). Metric: choice accurac
 
 | Model | Accuracy |
 |---|---|
-| Qwen3-VL-8B-Instruct | 49.6 |
 | Qwen2.5-VL-7B (base) | 35.0 |
 | **ArogyaSutra (7B)** | **50.4** |
 
