@@ -26,6 +26,16 @@
 
   html { scroll-behavior: smooth; }
 
+  .bg-logo {
+    position: fixed;
+    top: 0; left: 0;
+    width: 400px; height: 400px;
+    object-fit: contain;
+    opacity: 0.07;
+    pointer-events: none;
+    z-index: 0;
+  }
+
   body {
     font-family: 'DM Sans', sans-serif;
     background: var(--bg);
@@ -263,6 +273,7 @@
 <body>
 
 <!-- NAV -->
+<img src="web/logo.png" alt="" class="bg-logo" aria-hidden="true">
 <nav>
   <a href="#" class="logo">ArogyaSutra</a>
   <div class="links">
@@ -314,9 +325,15 @@
   </div>
 </div>
 
-<div style="margin: 1.25rem auto 1.5rem;">
-    <img src="web/logo.png" alt="ArogyaSutra logo" width="300" height="300" style="border-radius:16px;object-fit:contain;">
+<!-- FRAMEWORK IMAGE -->
+<div style="max-width:860px;margin:0 auto;padding:0 2rem 4rem;">
+  <div class="framework-img-wrap">
+    <img src="./web/actor-critic_2.jpg" alt="ArogyaSutra framework overview">
+    <div class="fig-caption">
+      <strong>Figure 1.</strong> Overview of the ArogyaSutra framework. The Actor processes medical images via vision tools and generates step-wise reasoning. The Critic evaluates outputs, triggering code-switching for language errors or memory-guided reflection for reasoning errors, and iteratively refines the Actor's response.
+    </div>
   </div>
+</div>
 
 <!-- ABSTRACT -->
 <section id="abstract">
@@ -352,21 +369,18 @@
       <p>An actor–critic multi-agent system with tool-grounded visual reasoning, code-switching, and dual short/long-term memory for iterative correction.</p>
     </div>
     <div class="contrib-card">
+      <div class="icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <h3>Actor–Critic Training Data</h3>
+      <p>An automated rollout pipeline generating critic-refined supervision traces (ArogyaBodha_ActCri) for distilling reasoning into a single inference model.</p>
+    </div>
+    <div class="contrib-card">
       <div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
       <h3>Fine-tuned MLLM</h3>
       <p>arogyasutraV1E3.5 — Qwen2.5-VL-7B distilled from actor–critic rollouts, achieving 43.40% avg and 50.4% OOD accuracy.</p>
     </div>
   </div>
 </section>
-<!-- FRAMEWORK IMAGE -->
-<div style="max-width:860px;margin:0 auto;padding:0 2rem 4rem;">
-  <div class="framework-img-wrap">
-    <img src="web/actor-critic_2.jpg" alt="ArogyaSutra framework overview">
-    <div class="fig-caption">
-      <strong>Figure 1.</strong> Overview of the ArogyaSutra framework. The Actor processes medical images via vision tools and generates step-wise reasoning. The Critic evaluates outputs, triggering code-switching for language errors or memory-guided reflection for reasoning errors, and iteratively refines the Actor's response.
-    </div>
-  </div>
-</div>
+
 <!-- FRAMEWORK -->
 <section id="framework">
   <div class="section-label">Framework</div>
