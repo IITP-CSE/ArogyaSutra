@@ -101,8 +101,8 @@ ArogyaSutra/
 │   ├── Depth-Anything-V2/  # Depth estimation service
 │   └── LLMDet/             # Object detection service
 ├── verl/                   # RL utilities
-├── gpt-4o-mini/MedQA/      # GPT-4o-mini baseline results
-├── qwen/MedQA/             # Qwen baseline results
+├── gpt-4o-mini/MedQA/      # GPT-4o-mini results
+├── qwen/MedQA/             # Qwen results
 ├── generate.sh             # Generate actor-critic training data
 ├── train.sh                # Fine-tune model
 ├── test.sh                 # Run evaluation
