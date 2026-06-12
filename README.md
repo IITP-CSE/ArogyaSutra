@@ -5,7 +5,7 @@
 ### A Multi-Agent Framework for Multimodal Medical Reasoning in Indic Languages
 
 [![HuggingFace](https://img.shields.io/badge/🤗_Models_&_Datasets-yellow?style=flat-square)](https://huggingface.co/collections/iit-patna-cse-ai/arogyasutra)
-[![Paper](https://img.shields.io/badge/📃_Paper-Coming_Soon-grey?style=flat-square)](#)
+[![Paper](https://img.shields.io/badge/📃_Paper-Arxiv)](https://huggingface.co/papers/2606.13572)
 [![Project Page](https://img.shields.io/badge/🌐_Project_Page-iitp--cse.github.io-green?style=flat-square)](https://iitp-cse.github.io/ArogyaSutra/)
 [![IJCAI 2026](https://img.shields.io/badge/IJCAI-2026-blue?style=flat-square)](https://2026.ijcai.org/)
 
